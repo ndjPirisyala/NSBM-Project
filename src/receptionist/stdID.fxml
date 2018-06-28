@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="aPane" fx:id="paneCreateStudentID" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="receptionist.StdID">
+   <children>
+      <Pane layoutX="128.0" layoutY="80.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="66.0" layoutY="55.0" text="Create a student ID..." textFill="#42c9c7">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <Button id="buttonCreate" fx:id="buttonCreate" layoutX="174.0" layoutY="184.0" mnemonicParsing="false" onAction="#handleCreate" stylesheets="@st.css" text="CREATE">
+               <font>
+                  <Font size="43.0" />
+               </font>
+            </Button>
+            <Label layoutX="129.0" layoutY="401.0" />
+            <Button id="button1" fx:id="buttonNext" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="31.0" prefWidth="79.0" stylesheets="@st.css" text="Next" textFill="#252222">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Button>
+            <Label fx:id="lblCreateID" layoutX="153.0" layoutY="315.0" prefHeight="103.0" prefWidth="250.0" textFill="WHITE">
+               <font>
+                  <Font size="65.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
