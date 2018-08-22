@@ -9,7 +9,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../receptionist/receptionistHome.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("login.fxml"));
         primaryStage.setTitle("NSBM GREEN UNIVERSITY");
         primaryStage.setScene(new Scene(root, 600, 600));
         //primaryStage.setMaximized(false);

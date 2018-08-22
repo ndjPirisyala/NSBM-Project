@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.SelectSemester">
+<AnchorPane id="aPane" fx:id="paneSemester" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.SelectSemester">
    <children>
       <Pane layoutX="171.0" layoutY="194.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -16,17 +16,17 @@
                   <Font size="30.0" />
                </font>
             </Label>
-            <RadioButton layoutX="99.0" layoutY="236.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="255.0" text="First semester" textFill="#ff98f8">
+            <RadioButton fx:id="rbFirstSem" layoutX="99.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleFirstSem" prefHeight="39.0" prefWidth="255.0" text="First semester" textFill="#ff98f8">
                <font>
                   <Font size="27.0" />
                </font>
             </RadioButton>
-            <RadioButton layoutX="99.0" layoutY="330.0" mnemonicParsing="false" text="Second semester" textFill="#ff98f8">
+            <RadioButton fx:id="rbSecondSem" layoutX="99.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleSecondSem" text="Second semester" textFill="#ff98f8">
                <font>
                   <Font size="27.0" />
                </font>
             </RadioButton>
-            <Button id="button1" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" stylesheets="@st.css" text="Next" textFill="#252222">
+            <Button id="button1" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleNext" prefHeight="31.0" prefWidth="79.0" stylesheets="@st.css" text="Next" textFill="#252222">
                <font>
                   <Font size="20.0" />
                </font>

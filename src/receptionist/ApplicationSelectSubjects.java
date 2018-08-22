@@ -96,6 +96,10 @@ public class ApplicationSelectSubjects implements Initializable{
         VarReceptionist.subSelection[6]=cbSem2Sub3.getValue();
         VarReceptionist.subSelection[7]=cbSem2Sub4.getValue();
 
+        for(int i=0;i<8;i++){
+            System.out.println(VarReceptionist.subSelection[i]);
+        }
+
         AnchorPane pane = FXMLLoader.load(getClass().getResource("printReceipt.fxml"));
         paneSelectSubjects.getChildren().setAll(pane);
     }
@@ -104,8 +108,8 @@ public class ApplicationSelectSubjects implements Initializable{
     public void initialize(URL url, ResourceBundle rb){
         ArrayList<String> listID=new ArrayList<String>();
         ArrayList<String> listNames=new ArrayList<String>();
-        listID=Queries.getSubjectIDS(VarReceptionist.schoolType,VarReceptionist.degreeType,VarReceptionist.year);
-        listNames=Queries.getSubjectNames(VarReceptionist.schoolType,VarReceptionist.degreeType,VarReceptionist.year);
+        listID=Queries.getSubjectIDS(VarReceptionist.schoolType,VarReceptionist.degreeType,String.valueOf(VarReceptionist.year));
+        listNames=Queries.getSubjectNames(VarReceptionist.schoolType,VarReceptionist.degreeType,String.valueOf(VarReceptionist.year));
         for(int i=0;i<listID.size();++i){
             String item=(listID.get(i)+" "+listNames.get(i));
             cbSem1Sub1.getItems().addAll(item);

@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 
@@ -53,8 +54,16 @@ public class DegreeType implements Initializable {
         }
         System.out.println(VarReceptionist.degreeType);
 
-        if(VarReceptionist.scenario.equals("registration")){
+        if(Arrays.asList("registration","subject details","add results").contains(VarReceptionist.scenario)){
             AnchorPane pane = FXMLLoader.load(getClass().getResource("schoolType.fxml"));
+            paneDegreeType.getChildren().setAll(pane);
+        }
+        else if(VarReceptionist.degreeType.equals("Bachelor") && Arrays.asList("student details").contains(VarReceptionist.scenario)){
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("../lecturer/searchStudentBat.fxml"));
+            paneDegreeType.getChildren().setAll(pane);
+        }
+        else if(VarReceptionist.degreeType.equals("Master") && Arrays.asList("student details").contains(VarReceptionist.scenario)){
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("../lecturer/searchStudentMas.fxml"));
             paneDegreeType.getChildren().setAll(pane);
         }
     }

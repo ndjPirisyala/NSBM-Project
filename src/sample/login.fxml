@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="aPane" fx:id="paneLogin" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Login">
+   <children>
+      <Pane layoutX="-117.0" layoutY="-6.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label layoutX="245.0" layoutY="245.0" prefHeight="17.0" prefWidth="120.0" text="Username" textFill="#1a376b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="284.0" prefHeight="17.0" prefWidth="120.0" text="Password" textFill="#1a376b">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUser" layoutX="399.0" layoutY="241.0" />
+            <TextField fx:id="txtPass" layoutX="399.0" layoutY="280.0" />
+            <Button id="buttonLogin" layoutX="440.0" layoutY="353.0" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="61.0" text="Login">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children></Pane>
+   </children>
+</AnchorPane>

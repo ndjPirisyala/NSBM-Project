@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class MasterYear implements Initializable{
@@ -48,8 +49,16 @@ public class MasterYear implements Initializable{
             VarReceptionist.year="2";
         }
 
-        if(VarReceptionist.scenario.equals("registration")){
+        if(Arrays.asList("registration").contains(VarReceptionist.scenario)){
             AnchorPane pane = FXMLLoader.load(getClass().getResource("stdID.fxml"));
+            paneMasterYear.getChildren().setAll(pane);
+        }
+        else if(Arrays.asList("subject details").contains(VarReceptionist.scenario)){
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("../student/subjectDetails.fxml"));
+            paneMasterYear.getChildren().setAll(pane);
+        }
+        else if(Arrays.asList("add results").contains(VarReceptionist.scenario)){
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("../student/selectSemester.fxml"));
             paneMasterYear.getChildren().setAll(pane);
         }
     }

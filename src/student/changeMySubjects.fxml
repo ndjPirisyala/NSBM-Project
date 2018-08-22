@@ -10,11 +10,11 @@
    <children>
       <Pane layoutX="121.0" layoutY="161.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <ComboBox layoutX="75.0" layoutY="99.0" prefWidth="150.0" />
-            <ComboBox layoutX="75.0" layoutY="193.0" prefWidth="150.0" />
-            <ComboBox layoutX="75.0" layoutY="287.0" prefWidth="150.0" />
-            <ComboBox layoutX="75.0" layoutY="381.0" prefWidth="150.0" />
-            <Button id="button1" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="87.0" stylesheets="@st.css" text="Change">
+            <ComboBox fx:id="cb1" layoutX="75.0" layoutY="99.0" prefWidth="150.0" />
+            <ComboBox fx:id="cb2" layoutX="75.0" layoutY="193.0" prefWidth="150.0" />
+            <ComboBox fx:id="cb3" layoutX="75.0" layoutY="287.0" prefWidth="150.0" />
+            <ComboBox fx:id="cb4" layoutX="75.0" layoutY="381.0" prefWidth="150.0" />
+            <Button id="button1" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" onAction="#handleChange" prefHeight="37.0" prefWidth="87.0" stylesheets="@st.css" text="Change">
                <font>
                   <Font size="17.0" />
                </font></Button>

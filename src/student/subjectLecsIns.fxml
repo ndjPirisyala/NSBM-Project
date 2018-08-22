@@ -17,22 +17,22 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="75.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_1" layoutX="72.0" layoutY="75.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="121.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_2" layoutX="72.0" layoutY="121.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="167.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_3" layoutX="72.0" layoutY="167.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="213.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_4" layoutX="72.0" layoutY="213.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
@@ -42,22 +42,22 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="325.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_5" layoutX="72.0" layoutY="325.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="371.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_6" layoutX="72.0" layoutY="371.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="417.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_7" layoutX="72.0" layoutY="417.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
             </Label>
-            <Label layoutX="72.0" layoutY="463.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_8" layoutX="72.0" layoutY="463.0" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>
@@ -73,7 +73,7 @@
                   <Font size="17.0" />
                </font>
             </Label>
-            <Label layoutX="182.0" layoutY="538.0" text="Label" textFill="#dad289">
+            <Label fx:id="lbl_fee" layoutX="182.0" layoutY="538.0" text="Label" textFill="#dad289">
                <font>
                   <Font size="15.0" />
                </font>

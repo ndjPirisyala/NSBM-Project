@@ -91,6 +91,20 @@ public class ApplicationCommon implements Initializable{
         VarReceptionist.address=txtAddress.getText();
         VarReceptionist.TP=txtTP.getText();
         VarReceptionist.email=txtEmail.getText();
+        VarReceptionist.TP=txtTP.getText();
+
+        System.out.println("*******************");
+        System.out.println(VarReceptionist.std_id);
+        System.out.println(VarReceptionist.name);
+        System.out.println(VarReceptionist.NIC);
+        System.out.println(VarReceptionist.address);
+        System.out.println(VarReceptionist.TP);
+        System.out.println(VarReceptionist.gender);
+        System.out.println(VarReceptionist.email);
+        System.out.println(VarReceptionist.degreeType);
+        System.out.println(VarReceptionist.schoolType);
+        System.out.println(VarReceptionist.year);
+        System.out.println("******************");
 
         if(VarReceptionist.degreeType.equals("Bachelor")){
             AnchorPane pane = FXMLLoader.load(getClass().getResource("applicationBachelorSpecial.fxml"));
@@ -117,7 +131,7 @@ public class ApplicationCommon implements Initializable{
             txtSdtID.setText(VarReceptionist.std_id);
         }
         if (txtYear != null) {
-            txtYear.setText(VarReceptionist.year);
+            txtYear.setText(String.valueOf(VarReceptionist.year));
         }
     }
 }

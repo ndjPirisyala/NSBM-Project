@@ -11,6 +11,7 @@ import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 public class SchoolType implements Initializable {
@@ -59,7 +60,7 @@ public class SchoolType implements Initializable {
             VarReceptionist.schoolType="School of Engineering";
         }
         System.out.println(VarReceptionist.schoolType);
-        if(VarReceptionist.scenario.equals("registration")){
+        if(Arrays.asList("registration","subject details","add results").contains(VarReceptionist.scenario)){
             if (VarReceptionist.degreeType.equals("Bachelor")){
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("bachelorYear.fxml"));
                 paneSchoolType.getChildren().setAll(pane);

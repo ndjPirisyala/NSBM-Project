@@ -7,25 +7,18 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.EnterResults">
+<AnchorPane id="aPane" fx:id="paneEnterResults" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.EnterResults">
    <children>
       <Pane layoutX="155.0" layoutY="229.0" prefHeight="200.0" prefWidth="200.0" />
-      <TableView layoutX="25.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
+      <TableView fx:id="tbl1" layoutX="25.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="Student_ D" />
+          <TableColumn fx:id="colID1" prefWidth="75.0" text="Student_ ID" />
           <TableColumn prefWidth="75.0" text="Result" />
         </columns>
       </TableView>
-      <TableView layoutX="225.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
+      <TableView fx:id="tbl2" layoutX="225.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
          <columns>
-            <TableColumn prefWidth="75.0" text="Student_ D" />
-            <TableColumn prefWidth="75.0" text="Result" />
-         </columns>
-      </TableView>
-      <TableView layoutX="418.0" layoutY="26.0" prefHeight="388.0" prefWidth="151.0">
-         <columns>
-            <TableColumn prefWidth="75.0" text="Student_ D" />
+            <TableColumn prefWidth="75.0" text="Student_ ID" />
             <TableColumn prefWidth="75.0" text="Result" />
          </columns>
       </TableView>

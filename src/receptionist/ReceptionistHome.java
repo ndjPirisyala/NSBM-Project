@@ -4,6 +4,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.chart.ValueAxis;
 import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
@@ -54,12 +55,14 @@ public class ReceptionistHome implements Initializable {
     void handleSearchStudents(ActionEvent event) throws IOException {
         AnchorPane pane = FXMLLoader.load(getClass().getResource("degreeType.fxml"));
         paneReceptionistHome.getChildren().setAll(pane);
+        VarReceptionist.scenario="student details";
     }
 
     @FXML
     void handleSubjectDetails(ActionEvent event) throws IOException{
         AnchorPane pane = FXMLLoader.load(getClass().getResource("degreeType.fxml"));
         paneReceptionistHome.getChildren().setAll(pane);
+        VarReceptionist.scenario="subject details";
     }
 
     @Override

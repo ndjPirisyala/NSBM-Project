@@ -5,95 +5,95 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@../lecturer/st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.SelectSubject">
+<AnchorPane id="aPane" fx:id="paneSelectSubject" prefHeight="600.0" prefWidth="600.0" stylesheets="@../lecturer/st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.SelectSubject">
    <children>
-      <Label layoutX="69.0" layoutY="70.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID1" layoutX="69.0" layoutY="70.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="70.0" prefHeight="0.0" prefWidth="31.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name1" layoutX="177.0" layoutY="70.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="127.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID2" layoutX="69.0" layoutY="127.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="184.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID3" layoutX="69.0" layoutY="184.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="241.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID4" layoutX="69.0" layoutY="241.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="298.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID5" layoutX="69.0" layoutY="298.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="355.0" prefWidth="31.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID6" layoutX="69.0" layoutY="355.0" prefWidth="31.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="412.0" prefWidth="31.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID7" layoutX="69.0" layoutY="412.0" prefWidth="31.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="467.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_ID8" layoutX="69.0" layoutY="467.0" text="Label" textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="127.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name2" layoutX="177.0" layoutY="127.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="184.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name3" layoutX="177.0" layoutY="184.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="241.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name4" layoutX="177.0" layoutY="241.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="298.0" prefWidth="31.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name5" layoutX="177.0" layoutY="298.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="355.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name6" layoutX="177.0" layoutY="355.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="412.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name7" layoutX="177.0" layoutY="412.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="469.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_name8" layoutX="177.0" layoutY="469.0" prefHeight="19.0" prefWidth="105.0" text="Label" textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Button layoutX="311.0" layoutY="67.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="124.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="181.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="238.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="295.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="352.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="409.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="466.0" mnemonicParsing="false" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="67.0" mnemonicParsing="false" onAction="#handlebtn1" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="124.0" mnemonicParsing="false" onAction="#handlebtn2" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="181.0" mnemonicParsing="false" onAction="#handlebtn3" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="238.0" mnemonicParsing="false" onAction="#handlebtn4" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="295.0" mnemonicParsing="false" onAction="#handlebtn5" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="352.0" mnemonicParsing="false" onAction="#handlebtn6" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="409.0" mnemonicParsing="false" onAction="#handlebtn7" text="Add results" textFill="#808d1b" />
+      <Button layoutX="311.0" layoutY="466.0" mnemonicParsing="false" onAction="#handlebtn8" text="Add results" textFill="#808d1b" />
    </children>
 </AnchorPane>

@@ -1,5 +1,8 @@
 package dataBaseConfig;
 
+import receptionist.VarReceptionist;
+import student.Result;
+
 import javax.swing.*;
 import java.sql.*;
 import java.util.*;
@@ -10,8 +13,8 @@ public class Queries {
     private final static Connection conn = DBConfig.getConnection();
 
     public static void insertBachelorInfo
-            (String table, String std_id, String name, String NIC, String address, String gender, String email, String degree_id, String school_id, int year){
-                String insert="insert into " + table + " (std_id, name, NIC, address, gender, email, degree_id, school_id, year) values (?,?,?,?,?,?,?,?,?)";
+            (String table, String std_id, String name, String NIC, String address, String tp, String gender, String email, String degree_id, String school_id, String year){
+                String insert="insert into " + table + " (std_id, name, NIC, address, tp, gender, email, degree_id, school_id, year) values (?,?,?,?,?,?,?,?,?,?)";
                 try{
                     PreparedStatement stmt = conn.prepareStatement(insert);
 
@@ -19,11 +22,12 @@ public class Queries {
                     stmt.setString(2,name);
                     stmt.setString(3,NIC);
                     stmt.setString(4,address);
-                    stmt.setString(5,gender);
-                    stmt.setString(6,email);
-                    stmt.setString(7,degree_id);
-                    stmt.setString(8,school_id);
-                    stmt.setInt(9,year);
+                    stmt.setString(5,tp);
+                    stmt.setString(6,gender);
+                    stmt.setString(7,email);
+                    stmt.setString(8,degree_id);
+                    stmt.setString(9,school_id);
+                    stmt.setString(10,year);
 
                     stmt.executeUpdate();
                 } catch (SQLException e) {
@@ -32,8 +36,8 @@ public class Queries {
     }
 
     public static void insertMasterInfo
-            (String table, String std_id, String name, String NIC, String address, String gender, String email, String degree_id, String school_id, int year, String qualification_type, String institute, int year_of_completion){
-                String insert="insert into " + table + " (std_id, name, NIC, address, gender, email, degree_id, school_id, year, qualification_type, institute, year_of_completion) values (?,?,?,?,?,?,?,?,?,?,?,?)";
+            (String table, String std_id, String name, String NIC, String address, String tp, String gender, String email, String degree_id, String school_id, String year, String qualification_type, String institute, String year_of_completion){
+                String insert="insert into " + table + " (std_id, name, NIC, address, tp, gender, email, degree_id, school_id, year, qualification_type, institute, year_of_completion) values (?,?,?,?,?,?,?,?,?,?,?,?,?)";
                 try{
                     PreparedStatement stmt = conn.prepareStatement(insert);
 
@@ -41,14 +45,15 @@ public class Queries {
                     stmt.setString(2,name);
                     stmt.setString(3,NIC);
                     stmt.setString(4,address);
-                    stmt.setString(5,gender);
-                    stmt.setString(6,email);
-                    stmt.setString(7,degree_id);
-                    stmt.setString(8,school_id);
-                    stmt.setInt(9,year);
-                    stmt.setString(10,qualification_type);
-                    stmt.setString(11,institute);
-                    stmt.setInt(12,year_of_completion);
+                    stmt.setString(5,tp);
+                    stmt.setString(6,gender);
+                    stmt.setString(7,email);
+                    stmt.setString(8,degree_id);
+                    stmt.setString(9,school_id);
+                    stmt.setString(10,year);
+                    stmt.setString(11,qualification_type);
+                    stmt.setString(12,institute);
+                    stmt.setString(13,year_of_completion);
 
                     stmt.executeUpdate();
                 } catch (SQLException e) {
@@ -135,20 +140,163 @@ public class Queries {
         }
     }
 
-    public static ArrayList getFees(String schoolID, String degreeID, String year){
-        String subName="select fee from subjects where school_id=\""+schoolID+"\" and degree_id=\""+degreeID+"\" and year="+year;
+
+    public static ArrayList getFees(){
         ArrayList<String> subFeeList=new ArrayList<String>();
+        try{
+            Statement stmt = conn.createStatement();
+            for(int i =0;i<VarReceptionist.subSelection.length;i++){
+                String subFee="select fee from subjects where sub_code="+VarReceptionist.subSelection[i].split(" ")[0];
+                ResultSet set = stmt.executeQuery(subFee);
+                if(set.next()){
+                    subFeeList.add(String.valueOf(set.getInt(1)));
+                }
+            }
+            return subFeeList;
+        } catch (SQLException e) {
+            System.out.println("Error");
+            return subFeeList;
+        }
+    }
+
+
+    public static ArrayList getSubjectLecturers(String subCode){
+        String lecIDs="select lec_id from lecturer_subjects where sub_code="+subCode;
+        ArrayList<String> lecs=new ArrayList<>();
+        ArrayList<String> lecName = new ArrayList<>();
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(lecIDs);
+
+            while(set.next()){
+                lecs.add(set.getString(1));
+            }
+
+            for(int i=0;i<lecs.size();i++){
+                String lecNames = "select name from lecturers where lec_id ="+lecs.get(i);
+                ResultSet set2 = stmt.executeQuery(lecNames);
+                if(set2.next()){
+                    lecName.add(set2.getString(1));
+                }
+            }
+            return lecName;
+        } catch(SQLException e){
+            e.printStackTrace();
+            return lecName;
+        }
+    }
+
+
+    public static ArrayList getSubjectInstructors(String subCode){
+        String inIDs="select ins_id from instructor_subjects where sub_code="+subCode;
+        ArrayList<String> ins=new ArrayList<>();
+        ArrayList<String> inName = new ArrayList<>();
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(inIDs);
+
+            while(set.next()){
+                ins.add(set.getString(1));
+            }
+
+            for(int i=0;i<ins.size();i++){
+                String lecNames = "select name from instructors where ins_id ="+ins.get(i);
+                ResultSet set2 = stmt.executeQuery(lecNames);
+                if(set2.next()){
+                    inName.add(set2.getString(1));
+                }
+            }
+            return inName;
+        } catch(SQLException e){
+            e.printStackTrace();
+            return inName;
+        }
+    }
+
+    public static int getFee(){
+        int theFee=0;
+        try{
+            Statement stmt = conn.createStatement();
+            String subFee="select fee from subjects where sub_code="+VarReceptionist.selectedSubID;
+            ResultSet set = stmt.executeQuery(subFee);
+            if(set.next()){
+                theFee = set.getInt(1);
+            }
+            return theFee;
+        } catch(SQLException e) {
+            e.printStackTrace();
+            return theFee;
+        }
+    }
+
+
+    public static ArrayList<String> getBachelorInfo(String ID, String table){
+        System.out.println(table);
+        String batInfoQuery = "select * from " + table + " where std_id = " + ID;
+        ArrayList<String> batInfo=new ArrayList<>();
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(batInfoQuery);
+
+            while(set.next()){
+                batInfo.add(set.getString(1));
+            }
+            return batInfo;
+        }catch(SQLException e){
+            e.printStackTrace();
+            return batInfo;
+        }
+    }
+
+    public static ArrayList getSubjectIDSWithSem(String schoolID, String degreeID, String year, String sem){
+        String subID="select sub_code from subjects where school_id=\""+schoolID+"\" and degree_id=\""+degreeID+"\" and year=\""+year+"\"and sem="+sem;
+        ArrayList<String> subList=new ArrayList<String>();
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(subID);
+
+            while(set.next()){
+                subList.add(set.getString(1));
+            }
+            return subList;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return subList;
+        }
+    }
+
+    public static ArrayList getSubjectNamesWithSem(String schoolID, String degreeID, String year, String sem){
+        String subName="select name from subjects where school_id=\""+schoolID+"\" and degree_id=\""+degreeID+"\" and year=\""+year+"\"and sem="+sem;
+        ArrayList<String> subNameList=new ArrayList<String>();
         try{
             Statement stmt = conn.createStatement();
             ResultSet set = stmt.executeQuery(subName);
 
             while(set.next()){
-                subFeeList.add(set.getString(1));
+                subNameList.add(set.getString(1));
             }
-            return subFeeList;
+            return subNameList;
         } catch (SQLException e) {
             e.printStackTrace();
-            return subFeeList;
+            return subNameList;
+        }
+    }
+
+    public static ArrayList getIDs(String table){
+        String ids = "select std_id from " + table;
+        ArrayList<String> IDs = new ArrayList<>();
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(ids);
+
+            while(set.next()){
+                IDs.add(set.getString(1));
+            }
+            return IDs;
+        }catch(SQLException e){
+            e.printStackTrace();
+            return IDs;
         }
     }
 }
+

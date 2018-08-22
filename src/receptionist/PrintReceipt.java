@@ -94,8 +94,8 @@ public class PrintReceipt implements Initializable {
         String table = FindTable.findStdTable();
         if(VarReceptionist.degreeType.equals("Bachelor")){
             Queries.insertBachelorInfo(table,VarReceptionist.std_id, VarReceptionist.name,
-                    VarReceptionist.NIC, VarReceptionist.address, VarReceptionist.gender, VarReceptionist.email,
-                    VarReceptionist.degreeType, VarReceptionist.schoolType, Integer.parseInt(VarReceptionist.year));
+                    VarReceptionist.NIC, VarReceptionist.address, VarReceptionist.TP, VarReceptionist.gender, VarReceptionist.email,
+                    VarReceptionist.degreeType, VarReceptionist.schoolType, VarReceptionist.year);
 
             for(int i=0;i<4;i++){
                 Queries.insertBachelorALResults(VarReceptionist.std_id,VarReceptionist.subArray[i],VarReceptionist.resArray[i]);
@@ -103,18 +103,18 @@ public class PrintReceipt implements Initializable {
         }
         else{
             Queries.insertMasterInfo(table,VarReceptionist.std_id, VarReceptionist.name,
-                    VarReceptionist.NIC, VarReceptionist.address, VarReceptionist.gender, VarReceptionist.email,
-                    VarReceptionist.degreeType, VarReceptionist.schoolType, Integer.parseInt(VarReceptionist.year),
-                    VarReceptionist.qualificationType, VarReceptionist.institute, Integer.parseInt(VarReceptionist.yearOfCompletion));
+                    VarReceptionist.NIC, VarReceptionist.address, VarReceptionist.TP, VarReceptionist.gender, VarReceptionist.email,
+                    VarReceptionist.degreeType, VarReceptionist.schoolType, VarReceptionist.year,
+                    VarReceptionist.qualificationType, VarReceptionist.institute, VarReceptionist.yearOfCompletion);
         }
-        if(VarReceptionist.inMonth.equals("February")){
+        if(VarReceptionist.inMonth.equals("July")){
             for(int i=0;i<4;i++){
-                Queries.insertSelectedSubs(VarReceptionist.std_id,VarReceptionist.subSelection[i]);
+                Queries.insertSelectedSubs(VarReceptionist.std_id,VarReceptionist.subSelection[i].split(" ")[0]);
             }
         }
         else{
             for(int i=0;i<8;i++){
-                Queries.insertSelectedSubs(VarReceptionist.std_id,VarReceptionist.subSelection[i]);
+                Queries.insertSelectedSubs(VarReceptionist.std_id,VarReceptionist.subSelection[i].split(" ")[0]);
             }
         }
     }
@@ -150,8 +150,8 @@ public class PrintReceipt implements Initializable {
             lblSem2Sub4.setText(VarReceptionist.subSelection[7]);
         }
         //set fees
-        /*ArrayList<String> feeList=new ArrayList<String>();
-        feeList=Queries.getFees(VarReceptionist.schoolType,VarReceptionist.degreeType,VarReceptionist.year);
+        ArrayList<String> feeList=new ArrayList<String>();
+        feeList=Queries.getFees();
         if(VarReceptionist.inMonth.equals("February")){
             if (lblSem1Fee1 != null) {
                 lblSem1Fee1.setText(feeList.get(0));
@@ -177,6 +177,11 @@ public class PrintReceipt implements Initializable {
         }
         if (lblSem2Fee4 != null) {
             lblSem2Fee4.setText(feeList.get(7));
-        }*/
+        }
+        int sum=0;
+        for(int i=0;i<feeList.size();i++){
+            sum+=Integer.valueOf(feeList.get(i));
+        }
+        lblTotal.setText(String.valueOf(sum));
     }
 }

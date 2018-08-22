@@ -1,0 +1,29 @@
+#aPane{
+    -fx-background-image: url(nsbmPic.jpg);
+    -fx-border-style: solid;
+    -fx-border-color: rgb(255, 185, 10);
+    -fx-border-width: 4px;
+}
+
+#button1{
+    -fx-background-color: rgb(179, 156, 185);
+    -fx-border-radius: 30px;
+}
+
+#buttonCreate{
+    -fx-background-color: rgb(230, 164, 244);
+}
+
+#buttonHome{
+    -fx-background-image: url(image2.jpg);
+}
+
+#buttonSearch{
+    -fx-background-color: rgb(230, 197, 38);
+}
+
+#buttonLogin{
+    -fx-background-color: rgb(117, 184, 185);
+    -fx-border-radius: 30px;
+}
+

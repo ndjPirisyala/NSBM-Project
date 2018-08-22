@@ -5,97 +5,97 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@../lecturer/st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.SubjectDetails">
+<AnchorPane id="aPane" fx:id="paneSubDetails" prefHeight="600.0" prefWidth="600.0" stylesheets="@../lecturer/st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="student.SubjectDetails">
    <children>
-      <Label layoutX="69.0" layoutY="70.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_1" layoutX="69.0" layoutY="70.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="70.0" prefHeight="0.0" prefWidth="31.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_12" layoutX="177.0" layoutY="70.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="112.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_2" layoutX="69.0" layoutY="112.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="154.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_3" layoutX="69.0" layoutY="154.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="196.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_4" layoutX="69.0" layoutY="196.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="238.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_5" layoutX="69.0" layoutY="238.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="280.0" prefWidth="31.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_6" layoutX="69.0" layoutY="280.0" prefWidth="31.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="322.0" prefWidth="31.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_7" layoutX="69.0" layoutY="322.0" prefWidth="31.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="69.0" layoutY="364.0" text="Label" textFill="#aea383">
+      <Label fx:id="lbl_8" layoutX="69.0" layoutY="364.0" text="..." textFill="#aea383">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="112.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_22" layoutX="177.0" layoutY="112.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="154.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_32" layoutX="177.0" layoutY="154.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="196.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_42" layoutX="177.0" layoutY="196.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="238.0" prefWidth="31.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_52" layoutX="177.0" layoutY="238.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="280.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_62" layoutX="177.0" layoutY="280.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="322.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_72" layoutX="177.0" layoutY="322.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Label layoutX="177.0" layoutY="364.0" text="Label" textFill="#dad289">
+      <Label fx:id="lbl_82" layoutX="177.0" layoutY="364.0" prefHeight="19.0" prefWidth="192.0" text="..." textFill="#dad289">
          <font>
             <Font size="13.0" />
          </font>
       </Label>
-      <Button layoutX="311.0" layoutY="67.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="112.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="154.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="196.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="238.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="280.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="322.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button layoutX="311.0" layoutY="364.0" mnemonicParsing="false" text="View details" textFill="#808d1b" />
-      <Button id="button1" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" stylesheets="@../lecturer/st.css" text="Cancel" textFill="#252222">
+      <Button fx:id="btn_1" layoutX="457.0" layoutY="67.0" mnemonicParsing="false" onAction="#handle_btn1" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_2" layoutX="457.0" layoutY="112.0" mnemonicParsing="false" onAction="#handle_btn2" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_3" layoutX="457.0" layoutY="154.0" mnemonicParsing="false" onAction="#handle_btn3" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_4" layoutX="457.0" layoutY="196.0" mnemonicParsing="false" onAction="#handle_btn4" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_5" layoutX="457.0" layoutY="238.0" mnemonicParsing="false" onAction="#handle_btn5" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_6" layoutX="457.0" layoutY="280.0" mnemonicParsing="false" onAction="#handle_btn6" text="View details" textFill="#808d1b" />
+      <Button fx:id="btn_7" layoutX="457.0" layoutY="322.0" mnemonicParsing="false" onAction="#handle_btn7" text="View details" textFill="#808d1b" />
+      <Button fx:id="byn_8" layoutX="457.0" layoutY="364.0" mnemonicParsing="false" onAction="#handle_btn8" text="View details" textFill="#808d1b" />
+      <Button id="button1" fx:id="lblCancel" layoutX="414.0" layoutY="498.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" stylesheets="@../lecturer/st.css" text="Cancel" textFill="#252222">
          <font>
             <Font size="18.0" />
          </font>

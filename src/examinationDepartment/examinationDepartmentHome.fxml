@@ -6,17 +6,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.ExaminationDepartmentHome">
+<AnchorPane id="aPane" fx:id="paneReceptionistHome" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.ExaminationDepartmentHome">
    <children>
       <Pane layoutX="160.0" layoutY="181.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
             <ButtonBar layoutX="57.0" layoutY="218.0" prefHeight="40.0" prefWidth="200.0" />
-            <Button id="buttonHome" layoutX="387.0" layoutY="400.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="159.0" stylesheets="@st.css" text="Add results" textFill="#5f6127">
+            <Button id="buttonHome" layoutX="387.0" layoutY="400.0" mnemonicParsing="false" onAction="#handleAddResults" prefHeight="40.0" prefWidth="159.0" stylesheets="@st.css" text="Add results" textFill="#5f6127">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button id="buttonHome" layoutX="387.0" layoutY="484.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="159.0" stylesheets="@st.css" text="View results" textFill="#5f6127">
+            <Button id="buttonHome" layoutX="387.0" layoutY="484.0" mnemonicParsing="false" onAction="#handleViewResults" prefHeight="44.0" prefWidth="159.0" stylesheets="@st.css" text="View results" textFill="#5f6127">
                <font>
                   <Font size="20.0" />
                </font>

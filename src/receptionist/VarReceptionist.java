@@ -2,6 +2,10 @@ package receptionist;
 
 public class VarReceptionist {
     public static String scenario;
+    public static String semester;
+    public static String selectedSubID;
+    public static String userName;
+    public static String passWord;
 
     //students basic info
     public static String inMonth;
