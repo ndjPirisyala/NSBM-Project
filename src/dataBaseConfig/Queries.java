@@ -298,5 +298,24 @@ public class Queries {
             return IDs;
         }
     }
+
+    public static void insertResults(String table, String std_id, String year, String semester, String degree_type, String school_id, String sub_code, String result){
+        String insert = "insert into "+ table + " (std_id, year, semester, degree_type, school_id, sub_code, result) values (?,?,?,?,?,?,?)";
+        try{
+            PreparedStatement stmt = conn.prepareStatement(insert);
+
+            stmt.setString(1,std_id);
+            stmt.setString(2,year);
+            stmt.setString(3,semester);
+            stmt.setString(4,degree_type);
+            stmt.setString(5,school_id);
+            stmt.setString(6,sub_code);
+            stmt.setString(7,result);
+
+            stmt.executeUpdate();
+        }catch(SQLException e){
+            e.printStackTrace();
+        }
+    }
 }
 

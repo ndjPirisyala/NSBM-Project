@@ -13,12 +13,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.control.TextField;
-import java.awt.event.ActionEvent;
+import javafx.event.ActionEvent;
+import receptionist.VarReceptionist;
+import sample.FindTable;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class EnterResults implements Initializable {
+    int n;
+    TextField arrTextout[]=new TextField[n];
+    ArrayList arr = new ArrayList();
 
     @FXML
     private AnchorPane paneEnterResults;
@@ -31,7 +37,10 @@ public class EnterResults implements Initializable {
 
     @FXML
     void handleEnter(ActionEvent event) {
-
+        String table = "exam_results";
+        for(int i=0;i<arr.size();i++){
+            Queries.insertResults(table, (String) arr.get(i),VarReceptionist.year,VarReceptionist.semester,VarReceptionist.degreeType,VarReceptionist.schoolType,VarReceptionist.selectedSubID,arrTextout[i].getText());
+        }
     }
 
     @Override
@@ -40,10 +49,15 @@ public class EnterResults implements Initializable {
         TableColumn results = new TableColumn("Result");
         tblView.getColumns().addAll(id,results);
 
-        ArrayList arrIDS = Queries.getIDs("bachelor_business_firstyear");
+        String table = FindTable.findStdTable();
+        ArrayList arrIDS = Queries.getIDs(table);
+        arr=arrIDS;
+
         ArrayList objArr = new ArrayList();
 
         TextField arrTxt[] = new TextField[arrIDS.size()];
+        n=arrTxt.length;
+        arrTextout=arrTxt;
 
         for(int i=0;i<arrIDS.size();i++){
             resultsClass rs = new resultsClass((String)arrIDS.get(i),"");
