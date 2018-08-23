@@ -2,19 +2,17 @@ package examinationDepartment;
 
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.property.StringProperty;
-import javafx.scene.control.TextField;
 
-
-public class resultsClass {
+public class viewClass {
     private SimpleStringProperty id;
-    private TextField results;
+    private SimpleStringProperty results;
 
-    resultsClass(String id, String results){
+    viewClass(String id, String results){
         this.id = new SimpleStringProperty(id);
-        this.results = new TextField(results);
+        this.results = new SimpleStringProperty(results);
     }
 
-    public String getID(){
+    public String getId(){
         return id.get();
     }
 
@@ -26,11 +24,15 @@ public class resultsClass {
         return id;
     }
 
-    public void setResults(TextField results){
-        this.results=results;
+    public String getResults(){
+        return results.get();
     }
 
-    public TextField getResults(){
+    public void setResults(String results){
+        this.id.set(results);
+    }
+
+    public final StringProperty resultsProperty() {
         return results;
     }
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
@@ -9,26 +8,9 @@
 
 <AnchorPane id="aPane" prefHeight="600.0" prefWidth="600.0" stylesheets="@st.css" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="examinationDepartment.ViewResults">
    <children>
-      <Pane layoutX="155.0" layoutY="229.0" prefHeight="200.0" prefWidth="200.0" />
-      <TableView layoutX="25.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
-        <columns>
-          <TableColumn prefWidth="75.0" text="Student_ D" />
-          <TableColumn prefWidth="75.0" text="Result" />
-        </columns>
-      </TableView>
-      <TableView layoutX="225.0" layoutY="26.0" prefHeight="529.0" prefWidth="151.0">
-         <columns>
-            <TableColumn prefWidth="75.0" text="Student_ D" />
-            <TableColumn prefWidth="75.0" text="Result" />
-         </columns>
-      </TableView>
-      <TableView layoutX="418.0" layoutY="26.0" prefHeight="388.0" prefWidth="151.0">
-         <columns>
-            <TableColumn prefWidth="75.0" text="Student_ D" />
-            <TableColumn prefWidth="75.0" text="Result" />
-         </columns>
-      </TableView>
-      <Button id="button1" layoutX="482.0" layoutY="498.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="79.0" stylesheets="@st.css" text="Cancel" textFill="#252222">
+      <Pane layoutX="155.0" layoutY="229.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <TableView fx:id="tblViewRes" layoutX="25.0" layoutY="26.0" prefHeight="529.0" prefWidth="264.0" />
+      <Button id="button1" fx:id="btnCancel" layoutX="401.0" layoutY="496.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="31.0" prefWidth="79.0" stylesheets="@st.css" text="Cancel" textFill="#252222">
          <font>
             <Font size="17.0" />
          </font>

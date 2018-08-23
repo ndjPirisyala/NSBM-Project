@@ -54,7 +54,7 @@ public class DegreeType implements Initializable {
         }
         System.out.println(VarReceptionist.degreeType);
 
-        if(Arrays.asList("registration","subject details","add results").contains(VarReceptionist.scenario)){
+        if(Arrays.asList("registration","subject details","add results","view results").contains(VarReceptionist.scenario)){
             AnchorPane pane = FXMLLoader.load(getClass().getResource("schoolType.fxml"));
             paneDegreeType.getChildren().setAll(pane);
         }

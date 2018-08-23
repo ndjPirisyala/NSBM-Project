@@ -60,7 +60,7 @@ public class SchoolType implements Initializable {
             VarReceptionist.schoolType="School of Engineering";
         }
         System.out.println(VarReceptionist.schoolType);
-        if(Arrays.asList("registration","subject details","add results").contains(VarReceptionist.scenario)){
+        if(Arrays.asList("registration","subject details","add results","view results").contains(VarReceptionist.scenario)){
             if (VarReceptionist.degreeType.equals("Bachelor")){
                 AnchorPane pane = FXMLLoader.load(getClass().getResource("bachelorYear.fxml"));
                 paneSchoolType.getChildren().setAll(pane);

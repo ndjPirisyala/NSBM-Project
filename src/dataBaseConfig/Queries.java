@@ -317,5 +317,22 @@ public class Queries {
             e.printStackTrace();
         }
     }
+
+    public static String getResults(String table, String std_id, String year, String semester, String degree_type, String school_id, String sub_code){
+        String getRes = "select result from "+table+" where std_id ="+std_id+" and year = "+year+" and semester "+ semester+" and degree_type = "+degree_type+" and school_id= "+school_id+" and sub_code = "+ sub_code;
+        String res="";
+        try{
+            Statement stmt = conn.createStatement();
+            ResultSet set = stmt.executeQuery(getRes);
+
+            while(set.next()){
+                res=set.getString(1);
+            }
+            return res;
+        }catch(SQLException e){
+            e.printStackTrace();
+            return res;
+        }
+    }
 }
 

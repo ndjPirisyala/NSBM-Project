@@ -33,8 +33,10 @@ public class ExaminationDepartmentHome {
     }
 
     @FXML
-    void handleViewResults(ActionEvent event) {
-
+    void handleViewResults(ActionEvent event) throws IOException{
+        VarReceptionist.scenario="view results";
+        AnchorPane pane = FXMLLoader.load(getClass().getResource("../receptionist/degreeType.fxml"));
+        paneReceptionistHome.getChildren().setAll(pane);
     }
 
 }

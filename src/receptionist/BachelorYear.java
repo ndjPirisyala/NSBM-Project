@@ -80,7 +80,7 @@ public class BachelorYear implements Initializable {
            AnchorPane pane = FXMLLoader.load(getClass().getResource("../student/subjectDetails.fxml"));
            paneBachelorYear.getChildren().setAll(pane);
        }
-       else if(Arrays.asList("add results").contains(VarReceptionist.scenario)){
+       else if(Arrays.asList("add results","view results").contains(VarReceptionist.scenario)){
            AnchorPane pane = FXMLLoader.load(getClass().getResource("../student/selectSemester.fxml"));
            paneBachelorYear.getChildren().setAll(pane);
        }

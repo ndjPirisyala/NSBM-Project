@@ -48,6 +48,10 @@ public class SelectSemester {
             AnchorPane pane = FXMLLoader.load(getClass().getResource("../examinationDepartment/selectSubject.fxml"));
             paneSemester.getChildren().setAll(pane);
         }
+        else if(Arrays.asList("view results").contains(VarReceptionist.scenario)){
+            AnchorPane pane = FXMLLoader.load(getClass().getResource("selectSubjectResults.fxml"));
+            paneSemester.getChildren().setAll(pane);
+        }
     }
 
     @FXML

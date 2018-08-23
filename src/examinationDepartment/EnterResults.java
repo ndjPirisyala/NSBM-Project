@@ -9,7 +9,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 
 import javafx.scene.control.TextField;
@@ -73,7 +72,4 @@ public class EnterResults implements Initializable {
         tblView.setItems(data);
 
     }
-
-   /* public void handleEnter(MouseEvent mouseEvent) {
-    }*/
 }
